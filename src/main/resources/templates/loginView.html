@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<font color="red">
+			<p th:text="${errMsg}"></p>
+
+		</font>
+		<form th:action="@{/login}" th:object="${counsellor}" method="post">
+			<table>
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" th:field="*{email}" required></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" th:field="*{pwd}" required></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="Login" class="btn btn-primary">
+					</td>
+				</tr>
+			</table>
+			
+				<a href="forgotPwd">
+					<h6>Forgot Password?
+				</a>
+				<a href="register">
+					Register Here</h6>
+				</a>
+		
+
+		</form>
+	</div>
+</body>
+
+</html>
